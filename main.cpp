@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
     QTranslator t;
     QStringList lenguajes;
-    lenguajes <<"Chino"<<"Frances"<<"Español"<<"Italiano";
+    lenguajes <<"Chino"<<"Frances"<<"Español";
     QString lang=QInputDialog::getItem(NULL,"selecciona tu lenguaje",
                                        "Lenguaje",lenguajes);
     if (lang=="Español"){
@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
     if(lang=="Frances"){
         t.load(":/french.qm");
     }
-    if (lang=="Italiano"){
-      t.load("italian.qm");}
+   // if (lang=="Italiano"){
+     // t.load("italian.qm");}
     if (lang !="Español"){
         a.installTranslator(&t);}
     //stilo
